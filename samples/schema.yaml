@@ -1,0 +1,60 @@
+type: schema
+version: v1
+spec:
+  compression: zstd
+  fields:
+  - name: timestamp_utc
+    type: datetime
+    encoding: delta
+  - name: request_id
+    type: string
+  - name: conversation_id
+    type: string
+  - name: message_id
+    type: string
+  - name: topic
+    type: string
+  - name: provider
+    type: string
+  - name: model
+    type: string
+  - name: endpoint
+    type: string
+  - name: input_tokens
+    type: integer
+  - name: cached_input_tokens
+    type: integer
+  - name: output_tokens
+    type: integer
+  - name: total_tokens
+    type: integer
+  - name: cost_usd
+    type: float
+  - name: status_code
+    type: integer
+    encoding: dictionary
+  - name: error_code
+    type: string
+  - name: error_reason
+    type: string
+    encoding: dictionary
+  - name: time_taken_ms
+    type: integer
+  - name: billing_mode
+    type: string
+  - name: user_id
+    type: string
+  - name: application_id
+    type: string
+  - name: region
+    type: string
+    encoding: dictionary
+  - name: streaming
+    type: boolean
+  - name: retry_count
+    type: integer
+  - name: finish_reason
+    type: string
+
+
+
